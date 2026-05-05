@@ -11,7 +11,9 @@ lazy val root = project
     libraryDependencies ++= Seq(
       "org.scalameta" %% "munit" % "1.3.0" % Test,
       "org.apache.commons" % "commons-compress" % "1.26.1",
-      "com.github.junrar"  % "junrar"           % "7.5.5"
+      "net.sf.sevenzipjbinding" % "sevenzipjbinding" % "16.02-2.01",
+      "net.sf.sevenzipjbinding" % "sevenzipjbinding-all-platforms" % "16.02-2.01",
+      "org.slf4j" % "slf4j-simple" % "2.0.12" 
     ),
 
     assembly / assemblyMergeStrategy := {
