@@ -1,8 +1,12 @@
-## sbt project compiled with Scala 3
+## Run Scala project on terminal
+# 1. Ép sbt nhận thư mục lưu cache và thư viện (.jar) nằm trong USB (Thay vì ổ C máy host)
+$env:SBT_GLOBAL_BASE="E:\scala-portable\sbt-global"
+$env:SBT_BOOT_DIRECTORY="E:\scala-portable\sbt-boot"
+$env:REPOSITORIES="E:\scala-portable\ivy2-cache"
+$env:IVY_HOME="E:\scala-portable\ivy2-cache"
 
-### Usage
+# 2. Khai báo đường dẫn tạm thời trỏ vào thư mục chứa file sbt.bat trong USB
+$env:PATH="E:\scala-portable\sbt\bin;" + $env:PATH
 
-This is a normal sbt project. You can compile code with `sbt compile`, run it with `sbt run`, and `sbt console` will start a Scala 3 REPL.
-
-For more information on the sbt-dotty plugin, see the
-[scala3-example-project](https://github.com/scala/scala3-example-project/blob/main/README.md).
+# 3. Giờ bạn gõ lệnh sbt để dev/test như bình thường
+sbt
